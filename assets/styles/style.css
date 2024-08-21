@@ -7,6 +7,7 @@
     --text-color-black: #2c3e50;
     --text-color-white: #ffffff;
     --muted-color: #e9e0e0;
+    --icono-apagado: #f1ecec;
     --botones: #0b7939;
     --botones-hover: #069241;
     --rojo-base: #a83338;
@@ -22,6 +23,7 @@ body {
 /* ------------------------------------------------------------------Navbar */
 .container .menu {
     background-color: var(--rojo-base);
+
 }
 
 /* Estilo del logo */
@@ -33,6 +35,7 @@ body {
     border-radius: 7px;
     cursor: pointer;
 }
+
 
 /* Estilos para los íconos de usuario y carrito */
 .navbar-nav .nav-item .nav-link {
@@ -57,4 +60,113 @@ body {
 .navbar-nav .nav-item .nav-link:hover::after {
     transform: translateX(0);
     /*esto lo que hace es que mueve la linea a la izquierda y ya para que se oculte7*/
+}
+
+/* //los icnos-------------- */
+/* Ajusta el tamaño y color de los íconos */
+.navbar-nav .nav-item .nav-link i {
+    font-size: 1.5rem;
+    color: var(--icono-apagado);
+}
+
+/* Efecto hover en los íconos */
+.navbar-nav .nav-item .nav-link:hover i {
+    color: var(--text-color-white);
+}
+
+/* el hero o la parte de vienvenida----------------- */
+.hero {
+    height: 100vh;
+}
+
+.titulo {
+    color: #333;
+}
+
+i {
+    color: var(--rojo-base);
+    /* Color de los icons */
+}
+
+h5 {
+    margin: 10px 0;
+}
+
+p {
+    color: #555;
+}
+
+/* Fondo animado */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f06, #4a90e2, #50b3a2);
+    background-size: 300% 300%;
+    animation: moveBackground 10s ease infinite;
+    z-index: 1;
+}
+
+/* Animación del fondo */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilos de efecto de vidrio para el contenido */
+.bg-glass {
+    background: rgba(255, 255, 255, 0.1);
+    /* Fondo semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Efecto de vidrio */
+    -webkit-backdrop-filter: blur(10px);
+    /* Compatibilidad con Safari */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidad */
+    z-index: 2;
+    position: relative;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .content {
+        text-align: center;
+    }
+
+    .col-md-6 {
+        margin-top: 20px;
+    }
+}
+
+
+/* -----------------el carruseeeeeeeeeeeel */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50%);
+    /* El degradado va de negro oscuro a transparente */
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 2;
 }
