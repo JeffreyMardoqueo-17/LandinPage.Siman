@@ -1,0 +1,60 @@
+/* Importo la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700;900&display=swap');
+
+:root {
+    --primary-color: #f8f4f4;
+    --background-color: #f5f2f0;
+    --text-color-black: #2c3e50;
+    --text-color-white: #ffffff;
+    --muted-color: #e9e0e0;
+    --botones: #0b7939;
+    --botones-hover: #069241;
+    --rojo-base: #a83338;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    padding-top: 56px;
+    background-color: var(--background-color);
+    color: var(--text-color-black);
+}
+
+/* ------------------------------------------------------------------Navbar */
+.container .menu {
+    background-color: var(--rojo-base);
+}
+
+/* Estilo del logo */
+.menu .logo {
+    max-height: 7vh;
+    /* Ajusta la altura máxima del logo */
+    width: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Estilos para los íconos de usuario y carrito */
+.navbar-nav .nav-item .nav-link {
+    color: var(--text-color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover con línea animada */
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color-white);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    transform: translateX(0);
+    /*esto lo que hace es que mueve la linea a la izquierda y ya para que se oculte7*/
+}
