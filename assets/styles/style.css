@@ -11,6 +11,7 @@
     --botones: #0b7939;
     --botones-hover: #069241;
     --rojo-base: #a83338;
+    --rojo-border: #802429;
 }
 
 body {
@@ -169,4 +170,59 @@ p {
 
 .carousel-caption {
     z-index: 2;
+}
+
+/* Estilo para el contenedor de cada imagen */
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Overlay de superposición sobre cada imagen individual */
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro con transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Oculto inicialmente */
+    transition: opacity 0.3s ease;
+    /* Transición suave */
+    z-index: 1;
+}
+
+/* Mostrar el overlay solo cuando se hace hover sobre la imagen específica */
+.img-container:hover .img-overlay {
+    opacity: 10;
+}
+
+/* Botón dentro del overlay */
+.img-overlay button {
+    background-color: var(--rojo-base);
+    /* Fondo del botón */
+    color: var(--text-color-white);
+    /* Color del texto */
+    border: none;
+    /* Sin bordes */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img-overlay button:hover {
+    background-color: var(--rojo-base);
+    border: 2px solid var(--rojo-border);
+    color: #ffffff;
+}
+
+/* Asegura que la imagen esté por debajo del overlay */
+.img-container img {
+    position: relative;
+    z-index: 0;
 }
