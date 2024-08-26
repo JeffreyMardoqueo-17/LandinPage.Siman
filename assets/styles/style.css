@@ -1,5 +1,8 @@
-/* Importo la fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary-color: #f8f4f4;
@@ -36,7 +39,6 @@ body {
     border-radius: 7px;
     cursor: pointer;
 }
-
 
 /* Estilos para los íconos de usuario y carrito */
 .navbar-nav .nav-item .nav-link {
@@ -97,60 +99,6 @@ p {
     color: #555;
 }
 
-/* Fondo animado */
-.animated-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #f06, #4a90e2, #50b3a2);
-    background-size: 300% 300%;
-    animation: moveBackground 10s ease infinite;
-    z-index: 1;
-}
-
-/* Animación del fondo */
-@keyframes moveBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Estilos de efecto de vidrio para el contenido */
-.bg-glass {
-    background: rgba(255, 255, 255, 0.1);
-    /* Fondo semi-transparente */
-    backdrop-filter: blur(10px);
-    /* Efecto de vidrio */
-    -webkit-backdrop-filter: blur(10px);
-    /* Compatibilidad con Safari */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    /* Sombra para dar profundidad */
-    z-index: 2;
-    position: relative;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .content {
-        text-align: center;
-    }
-
-    .col-md-6 {
-        margin-top: 20px;
-    }
-}
-
-
 /* -----------------el carruseeeeeeeeeeeel */
 .carousel-item {
     position: relative;
@@ -203,7 +151,7 @@ p {
 }
 
 /* Botón dentro del overlay */
-.img-overlay button {
+.img-overlay .vermas {
     background-color: var(--rojo-base);
     /* Fondo del botón */
     color: var(--text-color-white);
@@ -215,7 +163,7 @@ p {
     cursor: pointer;
 }
 
-.img-overlay button:hover {
+.img-overlay .vermas:hover {
     background-color: var(--rojo-base);
     border: 2px solid var(--rojo-border);
     color: #ffffff;
@@ -225,4 +173,35 @@ p {
 .img-container img {
     position: relative;
     z-index: 0;
+}
+
+.siman {
+    color: var(--rojo-base);
+    font-weight: bold;
+}
+
+.tutulo {
+    color: var(--rojo-base);
+}
+
+h1.display-4 {
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.2);
+    border-bottom: 3px solid var(--rojo-base);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: semi-bold;
+    color: var(--rojo-base);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
