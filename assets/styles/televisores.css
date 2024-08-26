@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-color: #f8f4f4;
     --background-color: #f5f2f0;
@@ -16,6 +22,10 @@ body {
     padding-top: 56px;
     background-color: var(--background-color);
     color: var(--text-color-black);
+}
+
+header {
+    margin-bottom: 30%;
 }
 
 /* ------------------------------------------------------------------Navbar */
@@ -57,6 +67,10 @@ body {
 .navbar-nav .nav-item .nav-link:hover::after {
     transform: translateX(0);
     /*esto lo que hace es que mueve la linea a la izquierda y ya para que se oculte7*/
+}
+
+.navbar-nav .navbar-toggler {
+    background-color: blue;
 }
 
 /* //los icnos-------------- */

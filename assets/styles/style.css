@@ -24,20 +24,30 @@ body {
     color: var(--text-color-black);
 }
 
-/* ------------------------------------------------------------------Navbar */
-.container .menu {
+/* Estilo general del navbar */
+.menu {
     background-color: var(--rojo-base);
-
 }
 
 /* Estilo del logo */
-.menu .logo {
+.logo {
     max-height: 7vh;
-    /* Ajusta la altura máxima del logo */
     width: auto;
     background-color: #fff;
     border-radius: 7px;
     cursor: pointer;
+}
+
+/* Ajustes de navbar para asegurar alineación en dispositivos móviles */
+.navbar-toggler {
+    border: none;
+}
+
+/* Alinear logo y botón de hamburguesa en una línea en móviles */
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Estilos para los íconos de usuario y carrito */
@@ -62,17 +72,14 @@ body {
 
 .navbar-nav .nav-item .nav-link:hover::after {
     transform: translateX(0);
-    /*esto lo que hace es que mueve la linea a la izquierda y ya para que se oculte7*/
 }
 
-/* //los icnos-------------- */
-/* Ajusta el tamaño y color de los íconos */
+/* Ajustes de tamaño y color de íconos */
 .navbar-nav .nav-item .nav-link i {
     font-size: 1.5rem;
     color: var(--icono-apagado);
 }
 
-/* Efecto hover en los íconos */
 .navbar-nav .nav-item .nav-link:hover i {
     color: var(--text-color-white);
 }

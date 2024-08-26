@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-color: #f8f4f4;
     --background-color: #f5f2f0;
@@ -19,9 +25,13 @@ body {
 }
 
 /* ------------------------------------------------------------------Navbar */
+header {
+    margin-bottom: 30%;
+}
+
 .container .menu {
     background-color: var(--rojo-base);
-
+    height: auto;
 }
 
 /* Estilo del logo */
